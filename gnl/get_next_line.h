@@ -6,7 +6,7 @@
 /*   By: thodavid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 09:49:29 by thodavid          #+#    #+#             */
-/*   Updated: 2024/12/05 14:47:16 by thodavid         ###   ########.fr       */
+/*   Updated: 2024/12/05 19:28:21 by thodavid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef GET_NEXT_LINE_H
@@ -27,13 +27,13 @@ typedef struct s_list
 
 
 char	*get_next_line(int fd);
-int     find_new_line(t_list *stash);
-void    generate_line(char **line, t_list *stash);
-void    read_and_stash(int fd, t_list **stash);
-void    add_to_stash(t_list **stash, char *buffer, int readed);
-void    extract_line(t_list *stash, char **line);
-void    clean_stash(t_list **stash);
-t_list  *ft_lst_get_last(t_list *stash);
-void    free_stash(t_list *stash);
+int     find_new_line(t_list *lst);
+void    generate_line(char **line, t_list *lst);
+void    read_and_addlst(int fd, t_list **lst);
+void    add_to_lst(t_list **lst, char *buffer, int readed);
+void    extract_line(t_list *lst, char **line);
+void    clean_lst(t_list **lst);
+t_list  *ft_lst_get_last(t_list *lst);
+void    free_lst(t_list *lst);
 int     ft_strlen(char *s);
 #endif
