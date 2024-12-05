@@ -6,7 +6,7 @@
 /*   By: thodavid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 09:44:32 by thodavid          #+#    #+#             */
-/*   Updated: 2024/12/04 16:51:03 by thodavid         ###   ########.fr       */
+/*   Updated: 2024/12/05 14:48:23 by thodavid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "get_next_line.h"
@@ -16,13 +16,11 @@ char	*get_next_line(int fd)
 	/*	variables	*/
 	static t_list	*stash;
 	char		*line;
-	int		readed;
 
 	/*	gestions des arguments	*/
 	if (fd < 0 || BUFFER_SIZE <= 0) //si le fichier on na pas le droit de le lire 
 		return (NULL);
 
-	readed = 1;
 	line = NULL;
 
 
@@ -30,7 +28,7 @@ char	*get_next_line(int fd)
 	/*	steps	*/
 
 	// 1. read from fd and add to stash
-	read_and_stash(fd, &stash, &readed);
+	read_and_stash(fd, &stash);
 	if(stash == NULL)
 		return (NULL);
 	// 2. extract from stash to line

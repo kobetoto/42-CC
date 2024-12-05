@@ -6,13 +6,10 @@
 /*   By: thodavid <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 10:50:16 by thodavid          #+#    #+#             */
-/*   Updated: 2024/12/04 13:58:54 by thodavid         ###   ########.fr       */
+/*   Updated: 2024/12/05 13:33:43 by thodavid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "get_next_line.h"
-
-char    *get_next_line(int fd);
 
 int main()
 {
